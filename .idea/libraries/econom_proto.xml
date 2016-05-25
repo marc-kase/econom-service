@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="econom-proto">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/econom-proto.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

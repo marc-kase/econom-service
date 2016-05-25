@@ -1,0 +1,45 @@
+<project>
+    <property name="PROTO_BIN" location="C:/cygwin64/src/protoc.exe"/>
+    <!--<property name="SRC_DIR" value="F:/CLOUD/GitHub-Projects/PrivateProjects/econom-service/data/protobuf" />-->
+    <!--<property name="DST_DIR" value="F:/CLOUD/GitHub-Projects/PrivateProjects/econom-service/data/protobuf/classes" />-->
+    <property name="PROTO_DIR" value="." />
+    <property name="SRC_DIR" value="./src" />
+    <property name="DST_DIR" value="./build" />
+    <property name="BLD_DIR" value="./classes" />
+    <property name="LIB_DIR" value="./lib" />
+    <property name="SRC_FILE" value="${SRC_DIR}/protocol.proto" />
+    <property name="econom-jar" value="econom-proto.jar" />
+
+    <target name="1. clean">
+        <delete dir="classes"/>
+        <delete dir="build"/>
+        <delete dir="lib"/>
+    </target>
+
+    <target name="2. compile-class">
+        <mkdir dir="classes"/>
+        <mkdir dir="build"/>
+        <exec dir="${PROTO_DIR}" executable="cmd">
+            <arg line="/c ${PROTO_BIN} -I=${SRC_DIR} --java_out=${DST_DIR} ${SRC_FILE}"/>
+        </exec>
+    </target>
+
+    <target name="3. create-jar">
+        <mkdir dir="lib"/>
+
+        <javac srcdir="${DST_DIR}"
+               destdir="${BLD_DIR}"
+               classpath="${SRC_DIR}/protobuf-java-2.6.1.jar"
+               debug="on"
+               source="1.8"
+                />
+        <jar destfile = "${LIB_DIR}/${econom-jar}"
+             basedir = "${BLD_DIR}" />
+    </target>
+
+    <target name="4. copy-to-lib">
+        <copy todir="../../lib">
+            <file name="${LIB_DIR}/${econom-jar}" />
+        </copy>
+    </target>
+</project>
