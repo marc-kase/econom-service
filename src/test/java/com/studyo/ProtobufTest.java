@@ -42,7 +42,7 @@ public class ProtobufTest {
         double amount = 1;
         double total = price * amount;
 
-        EconomProtocol.Groups gr = EconomProtocol.Groups.newBuilder()
+        EconomProtocol.Division gr = EconomProtocol.Division.newBuilder()
                 .setAction(ACTION.INSERT.ordinal())
                 .setActionTime(actionTime)
                 .setKey(1)
@@ -50,7 +50,7 @@ public class ProtobufTest {
                 .setColor("#0000")
                 .build();
 
-        EconomProtocol.Shopping sh = EconomProtocol.Shopping.newBuilder()
+        EconomProtocol.Buying sh = EconomProtocol.Buying.newBuilder()
                 .setAction(ACTION.INSERT.ordinal())
                 .setActionTime(actionTime)
                 .setOwnid(actionTime)
@@ -66,8 +66,8 @@ public class ProtobufTest {
         byte[] groups = gr.toByteArray();
         byte[] shopps = sh.toByteArray();
 
-        EconomProtocol.Groups gr2 = EconomProtocol.Groups.parseFrom(groups);
-        EconomProtocol.Shopping sh2 = EconomProtocol.Shopping.parseFrom(shopps);
+        EconomProtocol.Division gr2 = EconomProtocol.Division.parseFrom(groups);
+        EconomProtocol.Buying sh2 = EconomProtocol.Buying.parseFrom(shopps);
 
         Assert.assertEquals(ACTION.INSERT.ordinal(), gr2.getAction());
         Assert.assertEquals(actionTime, gr2.getActionTime());

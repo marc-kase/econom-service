@@ -28,9 +28,8 @@ public class UserDAO {
                     String pass = rs.getString("pass");
                     String role = rs.getString("role");
                     GrantedAuthority auth = new SimpleGrantedAuthority(role);
-                    UserInfo user = new UserInfo(name, pass,
+                    return new UserInfo(name, pass,
                             new ArrayList<GrantedAuthority>(){{add(auth);}});
-                    return user;
                 });
         return userInfo;
     }

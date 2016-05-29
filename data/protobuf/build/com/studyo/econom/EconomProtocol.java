@@ -13,6 +13,694 @@ public final class EconomProtocol {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    java.util.List<com.studyo.econom.EconomProtocol.Buying> 
+        getBuyingList();
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    com.studyo.econom.EconomProtocol.Buying getBuying(int index);
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    int getBuyingCount();
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    java.util.List<? extends com.studyo.econom.EconomProtocol.BuyingOrBuilder> 
+        getBuyingOrBuilderList();
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    com.studyo.econom.EconomProtocol.BuyingOrBuilder getBuyingOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code econom.Shopping}
+   */
+  public static final class Shopping extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:econom.Shopping)
+      ShoppingOrBuilder {
+    // Use Shopping.newBuilder() to construct.
+    private Shopping(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Shopping(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Shopping defaultInstance;
+    public static Shopping getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Shopping getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Shopping(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                buying_ = new java.util.ArrayList<com.studyo.econom.EconomProtocol.Buying>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              buying_.add(input.readMessage(com.studyo.econom.EconomProtocol.Buying.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          buying_ = java.util.Collections.unmodifiableList(buying_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.studyo.econom.EconomProtocol.Shopping.class, com.studyo.econom.EconomProtocol.Shopping.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Shopping> PARSER =
+        new com.google.protobuf.AbstractParser<Shopping>() {
+      public Shopping parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Shopping(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Shopping> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int BUYING_FIELD_NUMBER = 1;
+    private java.util.List<com.studyo.econom.EconomProtocol.Buying> buying_;
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    public java.util.List<com.studyo.econom.EconomProtocol.Buying> getBuyingList() {
+      return buying_;
+    }
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    public java.util.List<? extends com.studyo.econom.EconomProtocol.BuyingOrBuilder> 
+        getBuyingOrBuilderList() {
+      return buying_;
+    }
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    public int getBuyingCount() {
+      return buying_.size();
+    }
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    public com.studyo.econom.EconomProtocol.Buying getBuying(int index) {
+      return buying_.get(index);
+    }
+    /**
+     * <code>repeated .econom.Buying buying = 1;</code>
+     */
+    public com.studyo.econom.EconomProtocol.BuyingOrBuilder getBuyingOrBuilder(
+        int index) {
+      return buying_.get(index);
+    }
+
+    private void initFields() {
+      buying_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getBuyingCount(); i++) {
+        if (!getBuying(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < buying_.size(); i++) {
+        output.writeMessage(1, buying_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < buying_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, buying_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.studyo.econom.EconomProtocol.Shopping prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code econom.Shopping}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:econom.Shopping)
+        com.studyo.econom.EconomProtocol.ShoppingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.studyo.econom.EconomProtocol.Shopping.class, com.studyo.econom.EconomProtocol.Shopping.Builder.class);
+      }
+
+      // Construct using com.studyo.econom.EconomProtocol.Shopping.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getBuyingFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (buyingBuilder_ == null) {
+          buying_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          buyingBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_descriptor;
+      }
+
+      public com.studyo.econom.EconomProtocol.Shopping getDefaultInstanceForType() {
+        return com.studyo.econom.EconomProtocol.Shopping.getDefaultInstance();
+      }
+
+      public com.studyo.econom.EconomProtocol.Shopping build() {
+        com.studyo.econom.EconomProtocol.Shopping result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.studyo.econom.EconomProtocol.Shopping buildPartial() {
+        com.studyo.econom.EconomProtocol.Shopping result = new com.studyo.econom.EconomProtocol.Shopping(this);
+        int from_bitField0_ = bitField0_;
+        if (buyingBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            buying_ = java.util.Collections.unmodifiableList(buying_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.buying_ = buying_;
+        } else {
+          result.buying_ = buyingBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.studyo.econom.EconomProtocol.Shopping) {
+          return mergeFrom((com.studyo.econom.EconomProtocol.Shopping)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.studyo.econom.EconomProtocol.Shopping other) {
+        if (other == com.studyo.econom.EconomProtocol.Shopping.getDefaultInstance()) return this;
+        if (buyingBuilder_ == null) {
+          if (!other.buying_.isEmpty()) {
+            if (buying_.isEmpty()) {
+              buying_ = other.buying_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBuyingIsMutable();
+              buying_.addAll(other.buying_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.buying_.isEmpty()) {
+            if (buyingBuilder_.isEmpty()) {
+              buyingBuilder_.dispose();
+              buyingBuilder_ = null;
+              buying_ = other.buying_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              buyingBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getBuyingFieldBuilder() : null;
+            } else {
+              buyingBuilder_.addAllMessages(other.buying_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getBuyingCount(); i++) {
+          if (!getBuying(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.studyo.econom.EconomProtocol.Shopping parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.studyo.econom.EconomProtocol.Shopping) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.studyo.econom.EconomProtocol.Buying> buying_ =
+        java.util.Collections.emptyList();
+      private void ensureBuyingIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          buying_ = new java.util.ArrayList<com.studyo.econom.EconomProtocol.Buying>(buying_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.studyo.econom.EconomProtocol.Buying, com.studyo.econom.EconomProtocol.Buying.Builder, com.studyo.econom.EconomProtocol.BuyingOrBuilder> buyingBuilder_;
+
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public java.util.List<com.studyo.econom.EconomProtocol.Buying> getBuyingList() {
+        if (buyingBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(buying_);
+        } else {
+          return buyingBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public int getBuyingCount() {
+        if (buyingBuilder_ == null) {
+          return buying_.size();
+        } else {
+          return buyingBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.Buying getBuying(int index) {
+        if (buyingBuilder_ == null) {
+          return buying_.get(index);
+        } else {
+          return buyingBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder setBuying(
+          int index, com.studyo.econom.EconomProtocol.Buying value) {
+        if (buyingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBuyingIsMutable();
+          buying_.set(index, value);
+          onChanged();
+        } else {
+          buyingBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder setBuying(
+          int index, com.studyo.econom.EconomProtocol.Buying.Builder builderForValue) {
+        if (buyingBuilder_ == null) {
+          ensureBuyingIsMutable();
+          buying_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          buyingBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder addBuying(com.studyo.econom.EconomProtocol.Buying value) {
+        if (buyingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBuyingIsMutable();
+          buying_.add(value);
+          onChanged();
+        } else {
+          buyingBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder addBuying(
+          int index, com.studyo.econom.EconomProtocol.Buying value) {
+        if (buyingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBuyingIsMutable();
+          buying_.add(index, value);
+          onChanged();
+        } else {
+          buyingBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder addBuying(
+          com.studyo.econom.EconomProtocol.Buying.Builder builderForValue) {
+        if (buyingBuilder_ == null) {
+          ensureBuyingIsMutable();
+          buying_.add(builderForValue.build());
+          onChanged();
+        } else {
+          buyingBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder addBuying(
+          int index, com.studyo.econom.EconomProtocol.Buying.Builder builderForValue) {
+        if (buyingBuilder_ == null) {
+          ensureBuyingIsMutable();
+          buying_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          buyingBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder addAllBuying(
+          java.lang.Iterable<? extends com.studyo.econom.EconomProtocol.Buying> values) {
+        if (buyingBuilder_ == null) {
+          ensureBuyingIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, buying_);
+          onChanged();
+        } else {
+          buyingBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder clearBuying() {
+        if (buyingBuilder_ == null) {
+          buying_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          buyingBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public Builder removeBuying(int index) {
+        if (buyingBuilder_ == null) {
+          ensureBuyingIsMutable();
+          buying_.remove(index);
+          onChanged();
+        } else {
+          buyingBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.Buying.Builder getBuyingBuilder(
+          int index) {
+        return getBuyingFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.BuyingOrBuilder getBuyingOrBuilder(
+          int index) {
+        if (buyingBuilder_ == null) {
+          return buying_.get(index);  } else {
+          return buyingBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public java.util.List<? extends com.studyo.econom.EconomProtocol.BuyingOrBuilder> 
+           getBuyingOrBuilderList() {
+        if (buyingBuilder_ != null) {
+          return buyingBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(buying_);
+        }
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.Buying.Builder addBuyingBuilder() {
+        return getBuyingFieldBuilder().addBuilder(
+            com.studyo.econom.EconomProtocol.Buying.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.Buying.Builder addBuyingBuilder(
+          int index) {
+        return getBuyingFieldBuilder().addBuilder(
+            index, com.studyo.econom.EconomProtocol.Buying.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .econom.Buying buying = 1;</code>
+       */
+      public java.util.List<com.studyo.econom.EconomProtocol.Buying.Builder> 
+           getBuyingBuilderList() {
+        return getBuyingFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.studyo.econom.EconomProtocol.Buying, com.studyo.econom.EconomProtocol.Buying.Builder, com.studyo.econom.EconomProtocol.BuyingOrBuilder> 
+          getBuyingFieldBuilder() {
+        if (buyingBuilder_ == null) {
+          buyingBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.studyo.econom.EconomProtocol.Buying, com.studyo.econom.EconomProtocol.Buying.Builder, com.studyo.econom.EconomProtocol.BuyingOrBuilder>(
+                  buying_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          buying_ = null;
+        }
+        return buyingBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:econom.Shopping)
+    }
+
+    static {
+      defaultInstance = new Shopping(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:econom.Shopping)
+  }
+
+  public interface BuyingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:econom.Buying)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
      * <code>required int32 action = 1;</code>
      */
     boolean hasAction();
@@ -113,25 +801,25 @@ public final class EconomProtocol {
     long getDate();
   }
   /**
-   * Protobuf type {@code econom.Shopping}
+   * Protobuf type {@code econom.Buying}
    */
-  public static final class Shopping extends
+  public static final class Buying extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:econom.Shopping)
-      ShoppingOrBuilder {
-    // Use Shopping.newBuilder() to construct.
-    private Shopping(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:econom.Buying)
+      BuyingOrBuilder {
+    // Use Buying.newBuilder() to construct.
+    private Buying(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Shopping(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private Buying(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Shopping defaultInstance;
-    public static Shopping getDefaultInstance() {
+    private static final Buying defaultInstance;
+    public static Buying getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Shopping getDefaultInstanceForType() {
+    public Buying getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -141,7 +829,7 @@ public final class EconomProtocol {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Shopping(
+    private Buying(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -230,28 +918,28 @@ public final class EconomProtocol {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_descriptor;
+      return com.studyo.econom.EconomProtocol.internal_static_econom_Buying_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_fieldAccessorTable
+      return com.studyo.econom.EconomProtocol.internal_static_econom_Buying_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.studyo.econom.EconomProtocol.Shopping.class, com.studyo.econom.EconomProtocol.Shopping.Builder.class);
+              com.studyo.econom.EconomProtocol.Buying.class, com.studyo.econom.EconomProtocol.Buying.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Shopping> PARSER =
-        new com.google.protobuf.AbstractParser<Shopping>() {
-      public Shopping parsePartialFrom(
+    public static com.google.protobuf.Parser<Buying> PARSER =
+        new com.google.protobuf.AbstractParser<Buying>() {
+      public Buying parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Shopping(input, extensionRegistry);
+        return new Buying(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Shopping> getParserForType() {
+    public com.google.protobuf.Parser<Buying> getParserForType() {
       return PARSER;
     }
 
@@ -588,53 +1276,53 @@ public final class EconomProtocol {
       return super.writeReplace();
     }
 
-    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+    public static com.studyo.econom.EconomProtocol.Buying parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+    public static com.studyo.econom.EconomProtocol.Buying parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(byte[] data)
+    public static com.studyo.econom.EconomProtocol.Buying parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+    public static com.studyo.econom.EconomProtocol.Buying parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(java.io.InputStream input)
+    public static com.studyo.econom.EconomProtocol.Buying parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+    public static com.studyo.econom.EconomProtocol.Buying parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseDelimitedFrom(java.io.InputStream input)
+    public static com.studyo.econom.EconomProtocol.Buying parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseDelimitedFrom(
+    public static com.studyo.econom.EconomProtocol.Buying parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+    public static com.studyo.econom.EconomProtocol.Buying parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.studyo.econom.EconomProtocol.Shopping parseFrom(
+    public static com.studyo.econom.EconomProtocol.Buying parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -643,7 +1331,7 @@ public final class EconomProtocol {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.studyo.econom.EconomProtocol.Shopping prototype) {
+    public static Builder newBuilder(com.studyo.econom.EconomProtocol.Buying prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -655,25 +1343,25 @@ public final class EconomProtocol {
       return builder;
     }
     /**
-     * Protobuf type {@code econom.Shopping}
+     * Protobuf type {@code econom.Buying}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:econom.Shopping)
-        com.studyo.econom.EconomProtocol.ShoppingOrBuilder {
+        // @@protoc_insertion_point(builder_implements:econom.Buying)
+        com.studyo.econom.EconomProtocol.BuyingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_descriptor;
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Buying_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_fieldAccessorTable
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Buying_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.studyo.econom.EconomProtocol.Shopping.class, com.studyo.econom.EconomProtocol.Shopping.Builder.class);
+                com.studyo.econom.EconomProtocol.Buying.class, com.studyo.econom.EconomProtocol.Buying.Builder.class);
       }
 
-      // Construct using com.studyo.econom.EconomProtocol.Shopping.newBuilder()
+      // Construct using com.studyo.econom.EconomProtocol.Buying.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -722,23 +1410,23 @@ public final class EconomProtocol {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.studyo.econom.EconomProtocol.internal_static_econom_Shopping_descriptor;
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Buying_descriptor;
       }
 
-      public com.studyo.econom.EconomProtocol.Shopping getDefaultInstanceForType() {
-        return com.studyo.econom.EconomProtocol.Shopping.getDefaultInstance();
+      public com.studyo.econom.EconomProtocol.Buying getDefaultInstanceForType() {
+        return com.studyo.econom.EconomProtocol.Buying.getDefaultInstance();
       }
 
-      public com.studyo.econom.EconomProtocol.Shopping build() {
-        com.studyo.econom.EconomProtocol.Shopping result = buildPartial();
+      public com.studyo.econom.EconomProtocol.Buying build() {
+        com.studyo.econom.EconomProtocol.Buying result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.studyo.econom.EconomProtocol.Shopping buildPartial() {
-        com.studyo.econom.EconomProtocol.Shopping result = new com.studyo.econom.EconomProtocol.Shopping(this);
+      public com.studyo.econom.EconomProtocol.Buying buildPartial() {
+        com.studyo.econom.EconomProtocol.Buying result = new com.studyo.econom.EconomProtocol.Buying(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -787,16 +1475,16 @@ public final class EconomProtocol {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.studyo.econom.EconomProtocol.Shopping) {
-          return mergeFrom((com.studyo.econom.EconomProtocol.Shopping)other);
+        if (other instanceof com.studyo.econom.EconomProtocol.Buying) {
+          return mergeFrom((com.studyo.econom.EconomProtocol.Buying)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.studyo.econom.EconomProtocol.Shopping other) {
-        if (other == com.studyo.econom.EconomProtocol.Shopping.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.studyo.econom.EconomProtocol.Buying other) {
+        if (other == com.studyo.econom.EconomProtocol.Buying.getDefaultInstance()) return this;
         if (other.hasAction()) {
           setAction(other.getAction());
         }
@@ -855,11 +1543,11 @@ public final class EconomProtocol {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.studyo.econom.EconomProtocol.Shopping parsedMessage = null;
+        com.studyo.econom.EconomProtocol.Buying parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.studyo.econom.EconomProtocol.Shopping) e.getUnfinishedMessage();
+          parsedMessage = (com.studyo.econom.EconomProtocol.Buying) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1278,19 +1966,707 @@ public final class EconomProtocol {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:econom.Shopping)
+      // @@protoc_insertion_point(builder_scope:econom.Buying)
     }
 
     static {
-      defaultInstance = new Shopping(true);
+      defaultInstance = new Buying(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:econom.Shopping)
+    // @@protoc_insertion_point(class_scope:econom.Buying)
   }
 
   public interface GroupsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:econom.Groups)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    java.util.List<com.studyo.econom.EconomProtocol.Division> 
+        getDivisionList();
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    com.studyo.econom.EconomProtocol.Division getDivision(int index);
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    int getDivisionCount();
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    java.util.List<? extends com.studyo.econom.EconomProtocol.DivisionOrBuilder> 
+        getDivisionOrBuilderList();
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    com.studyo.econom.EconomProtocol.DivisionOrBuilder getDivisionOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code econom.Groups}
+   */
+  public static final class Groups extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:econom.Groups)
+      GroupsOrBuilder {
+    // Use Groups.newBuilder() to construct.
+    private Groups(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Groups(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Groups defaultInstance;
+    public static Groups getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Groups getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Groups(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                division_ = new java.util.ArrayList<com.studyo.econom.EconomProtocol.Division>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              division_.add(input.readMessage(com.studyo.econom.EconomProtocol.Division.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          division_ = java.util.Collections.unmodifiableList(division_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.studyo.econom.EconomProtocol.Groups.class, com.studyo.econom.EconomProtocol.Groups.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Groups> PARSER =
+        new com.google.protobuf.AbstractParser<Groups>() {
+      public Groups parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Groups(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Groups> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int DIVISION_FIELD_NUMBER = 1;
+    private java.util.List<com.studyo.econom.EconomProtocol.Division> division_;
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    public java.util.List<com.studyo.econom.EconomProtocol.Division> getDivisionList() {
+      return division_;
+    }
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    public java.util.List<? extends com.studyo.econom.EconomProtocol.DivisionOrBuilder> 
+        getDivisionOrBuilderList() {
+      return division_;
+    }
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    public int getDivisionCount() {
+      return division_.size();
+    }
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    public com.studyo.econom.EconomProtocol.Division getDivision(int index) {
+      return division_.get(index);
+    }
+    /**
+     * <code>repeated .econom.Division division = 1;</code>
+     */
+    public com.studyo.econom.EconomProtocol.DivisionOrBuilder getDivisionOrBuilder(
+        int index) {
+      return division_.get(index);
+    }
+
+    private void initFields() {
+      division_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getDivisionCount(); i++) {
+        if (!getDivision(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < division_.size(); i++) {
+        output.writeMessage(1, division_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < division_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, division_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.studyo.econom.EconomProtocol.Groups prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code econom.Groups}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:econom.Groups)
+        com.studyo.econom.EconomProtocol.GroupsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.studyo.econom.EconomProtocol.Groups.class, com.studyo.econom.EconomProtocol.Groups.Builder.class);
+      }
+
+      // Construct using com.studyo.econom.EconomProtocol.Groups.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getDivisionFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (divisionBuilder_ == null) {
+          division_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          divisionBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_descriptor;
+      }
+
+      public com.studyo.econom.EconomProtocol.Groups getDefaultInstanceForType() {
+        return com.studyo.econom.EconomProtocol.Groups.getDefaultInstance();
+      }
+
+      public com.studyo.econom.EconomProtocol.Groups build() {
+        com.studyo.econom.EconomProtocol.Groups result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.studyo.econom.EconomProtocol.Groups buildPartial() {
+        com.studyo.econom.EconomProtocol.Groups result = new com.studyo.econom.EconomProtocol.Groups(this);
+        int from_bitField0_ = bitField0_;
+        if (divisionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            division_ = java.util.Collections.unmodifiableList(division_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.division_ = division_;
+        } else {
+          result.division_ = divisionBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.studyo.econom.EconomProtocol.Groups) {
+          return mergeFrom((com.studyo.econom.EconomProtocol.Groups)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.studyo.econom.EconomProtocol.Groups other) {
+        if (other == com.studyo.econom.EconomProtocol.Groups.getDefaultInstance()) return this;
+        if (divisionBuilder_ == null) {
+          if (!other.division_.isEmpty()) {
+            if (division_.isEmpty()) {
+              division_ = other.division_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDivisionIsMutable();
+              division_.addAll(other.division_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.division_.isEmpty()) {
+            if (divisionBuilder_.isEmpty()) {
+              divisionBuilder_.dispose();
+              divisionBuilder_ = null;
+              division_ = other.division_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              divisionBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getDivisionFieldBuilder() : null;
+            } else {
+              divisionBuilder_.addAllMessages(other.division_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        for (int i = 0; i < getDivisionCount(); i++) {
+          if (!getDivision(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.studyo.econom.EconomProtocol.Groups parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.studyo.econom.EconomProtocol.Groups) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.studyo.econom.EconomProtocol.Division> division_ =
+        java.util.Collections.emptyList();
+      private void ensureDivisionIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          division_ = new java.util.ArrayList<com.studyo.econom.EconomProtocol.Division>(division_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.studyo.econom.EconomProtocol.Division, com.studyo.econom.EconomProtocol.Division.Builder, com.studyo.econom.EconomProtocol.DivisionOrBuilder> divisionBuilder_;
+
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public java.util.List<com.studyo.econom.EconomProtocol.Division> getDivisionList() {
+        if (divisionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(division_);
+        } else {
+          return divisionBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public int getDivisionCount() {
+        if (divisionBuilder_ == null) {
+          return division_.size();
+        } else {
+          return divisionBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.Division getDivision(int index) {
+        if (divisionBuilder_ == null) {
+          return division_.get(index);
+        } else {
+          return divisionBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder setDivision(
+          int index, com.studyo.econom.EconomProtocol.Division value) {
+        if (divisionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDivisionIsMutable();
+          division_.set(index, value);
+          onChanged();
+        } else {
+          divisionBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder setDivision(
+          int index, com.studyo.econom.EconomProtocol.Division.Builder builderForValue) {
+        if (divisionBuilder_ == null) {
+          ensureDivisionIsMutable();
+          division_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          divisionBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder addDivision(com.studyo.econom.EconomProtocol.Division value) {
+        if (divisionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDivisionIsMutable();
+          division_.add(value);
+          onChanged();
+        } else {
+          divisionBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder addDivision(
+          int index, com.studyo.econom.EconomProtocol.Division value) {
+        if (divisionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDivisionIsMutable();
+          division_.add(index, value);
+          onChanged();
+        } else {
+          divisionBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder addDivision(
+          com.studyo.econom.EconomProtocol.Division.Builder builderForValue) {
+        if (divisionBuilder_ == null) {
+          ensureDivisionIsMutable();
+          division_.add(builderForValue.build());
+          onChanged();
+        } else {
+          divisionBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder addDivision(
+          int index, com.studyo.econom.EconomProtocol.Division.Builder builderForValue) {
+        if (divisionBuilder_ == null) {
+          ensureDivisionIsMutable();
+          division_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          divisionBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder addAllDivision(
+          java.lang.Iterable<? extends com.studyo.econom.EconomProtocol.Division> values) {
+        if (divisionBuilder_ == null) {
+          ensureDivisionIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, division_);
+          onChanged();
+        } else {
+          divisionBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder clearDivision() {
+        if (divisionBuilder_ == null) {
+          division_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          divisionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public Builder removeDivision(int index) {
+        if (divisionBuilder_ == null) {
+          ensureDivisionIsMutable();
+          division_.remove(index);
+          onChanged();
+        } else {
+          divisionBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.Division.Builder getDivisionBuilder(
+          int index) {
+        return getDivisionFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.DivisionOrBuilder getDivisionOrBuilder(
+          int index) {
+        if (divisionBuilder_ == null) {
+          return division_.get(index);  } else {
+          return divisionBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public java.util.List<? extends com.studyo.econom.EconomProtocol.DivisionOrBuilder> 
+           getDivisionOrBuilderList() {
+        if (divisionBuilder_ != null) {
+          return divisionBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(division_);
+        }
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.Division.Builder addDivisionBuilder() {
+        return getDivisionFieldBuilder().addBuilder(
+            com.studyo.econom.EconomProtocol.Division.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public com.studyo.econom.EconomProtocol.Division.Builder addDivisionBuilder(
+          int index) {
+        return getDivisionFieldBuilder().addBuilder(
+            index, com.studyo.econom.EconomProtocol.Division.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .econom.Division division = 1;</code>
+       */
+      public java.util.List<com.studyo.econom.EconomProtocol.Division.Builder> 
+           getDivisionBuilderList() {
+        return getDivisionFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.studyo.econom.EconomProtocol.Division, com.studyo.econom.EconomProtocol.Division.Builder, com.studyo.econom.EconomProtocol.DivisionOrBuilder> 
+          getDivisionFieldBuilder() {
+        if (divisionBuilder_ == null) {
+          divisionBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.studyo.econom.EconomProtocol.Division, com.studyo.econom.EconomProtocol.Division.Builder, com.studyo.econom.EconomProtocol.DivisionOrBuilder>(
+                  division_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          division_ = null;
+        }
+        return divisionBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:econom.Groups)
+    }
+
+    static {
+      defaultInstance = new Groups(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:econom.Groups)
+  }
+
+  public interface DivisionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:econom.Division)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1349,25 +2725,25 @@ public final class EconomProtocol {
         getColorBytes();
   }
   /**
-   * Protobuf type {@code econom.Groups}
+   * Protobuf type {@code econom.Division}
    */
-  public static final class Groups extends
+  public static final class Division extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:econom.Groups)
-      GroupsOrBuilder {
-    // Use Groups.newBuilder() to construct.
-    private Groups(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:econom.Division)
+      DivisionOrBuilder {
+    // Use Division.newBuilder() to construct.
+    private Division(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private Groups(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private Division(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final Groups defaultInstance;
-    public static Groups getDefaultInstance() {
+    private static final Division defaultInstance;
+    public static Division getDefaultInstance() {
       return defaultInstance;
     }
 
-    public Groups getDefaultInstanceForType() {
+    public Division getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -1377,7 +2753,7 @@ public final class EconomProtocol {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private Groups(
+    private Division(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1441,28 +2817,28 @@ public final class EconomProtocol {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_descriptor;
+      return com.studyo.econom.EconomProtocol.internal_static_econom_Division_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_fieldAccessorTable
+      return com.studyo.econom.EconomProtocol.internal_static_econom_Division_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.studyo.econom.EconomProtocol.Groups.class, com.studyo.econom.EconomProtocol.Groups.Builder.class);
+              com.studyo.econom.EconomProtocol.Division.class, com.studyo.econom.EconomProtocol.Division.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<Groups> PARSER =
-        new com.google.protobuf.AbstractParser<Groups>() {
-      public Groups parsePartialFrom(
+    public static com.google.protobuf.Parser<Division> PARSER =
+        new com.google.protobuf.AbstractParser<Division>() {
+      public Division parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Groups(input, extensionRegistry);
+        return new Division(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Groups> getParserForType() {
+    public com.google.protobuf.Parser<Division> getParserForType() {
       return PARSER;
     }
 
@@ -1684,53 +3060,53 @@ public final class EconomProtocol {
       return super.writeReplace();
     }
 
-    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+    public static com.studyo.econom.EconomProtocol.Division parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+    public static com.studyo.econom.EconomProtocol.Division parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseFrom(byte[] data)
+    public static com.studyo.econom.EconomProtocol.Division parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+    public static com.studyo.econom.EconomProtocol.Division parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseFrom(java.io.InputStream input)
+    public static com.studyo.econom.EconomProtocol.Division parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+    public static com.studyo.econom.EconomProtocol.Division parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseDelimitedFrom(java.io.InputStream input)
+    public static com.studyo.econom.EconomProtocol.Division parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseDelimitedFrom(
+    public static com.studyo.econom.EconomProtocol.Division parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+    public static com.studyo.econom.EconomProtocol.Division parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.studyo.econom.EconomProtocol.Groups parseFrom(
+    public static com.studyo.econom.EconomProtocol.Division parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1739,7 +3115,7 @@ public final class EconomProtocol {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.studyo.econom.EconomProtocol.Groups prototype) {
+    public static Builder newBuilder(com.studyo.econom.EconomProtocol.Division prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1751,25 +3127,25 @@ public final class EconomProtocol {
       return builder;
     }
     /**
-     * Protobuf type {@code econom.Groups}
+     * Protobuf type {@code econom.Division}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:econom.Groups)
-        com.studyo.econom.EconomProtocol.GroupsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:econom.Division)
+        com.studyo.econom.EconomProtocol.DivisionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_descriptor;
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Division_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_fieldAccessorTable
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Division_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.studyo.econom.EconomProtocol.Groups.class, com.studyo.econom.EconomProtocol.Groups.Builder.class);
+                com.studyo.econom.EconomProtocol.Division.class, com.studyo.econom.EconomProtocol.Division.Builder.class);
       }
 
-      // Construct using com.studyo.econom.EconomProtocol.Groups.newBuilder()
+      // Construct using com.studyo.econom.EconomProtocol.Division.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1808,23 +3184,23 @@ public final class EconomProtocol {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.studyo.econom.EconomProtocol.internal_static_econom_Groups_descriptor;
+        return com.studyo.econom.EconomProtocol.internal_static_econom_Division_descriptor;
       }
 
-      public com.studyo.econom.EconomProtocol.Groups getDefaultInstanceForType() {
-        return com.studyo.econom.EconomProtocol.Groups.getDefaultInstance();
+      public com.studyo.econom.EconomProtocol.Division getDefaultInstanceForType() {
+        return com.studyo.econom.EconomProtocol.Division.getDefaultInstance();
       }
 
-      public com.studyo.econom.EconomProtocol.Groups build() {
-        com.studyo.econom.EconomProtocol.Groups result = buildPartial();
+      public com.studyo.econom.EconomProtocol.Division build() {
+        com.studyo.econom.EconomProtocol.Division result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.studyo.econom.EconomProtocol.Groups buildPartial() {
-        com.studyo.econom.EconomProtocol.Groups result = new com.studyo.econom.EconomProtocol.Groups(this);
+      public com.studyo.econom.EconomProtocol.Division buildPartial() {
+        com.studyo.econom.EconomProtocol.Division result = new com.studyo.econom.EconomProtocol.Division(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1853,16 +3229,16 @@ public final class EconomProtocol {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.studyo.econom.EconomProtocol.Groups) {
-          return mergeFrom((com.studyo.econom.EconomProtocol.Groups)other);
+        if (other instanceof com.studyo.econom.EconomProtocol.Division) {
+          return mergeFrom((com.studyo.econom.EconomProtocol.Division)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.studyo.econom.EconomProtocol.Groups other) {
-        if (other == com.studyo.econom.EconomProtocol.Groups.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.studyo.econom.EconomProtocol.Division other) {
+        if (other == com.studyo.econom.EconomProtocol.Division.getDefaultInstance()) return this;
         if (other.hasAction()) {
           setAction(other.getAction());
         }
@@ -1906,11 +3282,11 @@ public final class EconomProtocol {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.studyo.econom.EconomProtocol.Groups parsedMessage = null;
+        com.studyo.econom.EconomProtocol.Division parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.studyo.econom.EconomProtocol.Groups) e.getUnfinishedMessage();
+          parsedMessage = (com.studyo.econom.EconomProtocol.Division) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2169,15 +3545,15 @@ public final class EconomProtocol {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:econom.Groups)
+      // @@protoc_insertion_point(builder_scope:econom.Division)
     }
 
     static {
-      defaultInstance = new Groups(true);
+      defaultInstance = new Division(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:econom.Groups)
+    // @@protoc_insertion_point(class_scope:econom.Division)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
@@ -2186,10 +3562,20 @@ public final class EconomProtocol {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_econom_Shopping_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_econom_Buying_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_econom_Buying_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_econom_Groups_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_econom_Groups_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_econom_Division_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_econom_Division_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2199,15 +3585,17 @@ public final class EconomProtocol {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016protocol.proto\022\006econom\"\252\001\n\010Shopping\022\016\n" +
-      "\006action\030\001 \002(\005\022\023\n\013action_time\030\002 \002(\003\022\r\n\005ow" +
-      "nid\030\003 \002(\003\022\014\n\004name\030\004 \001(\t\022\022\n\ngroup_name\030\005 " +
-      "\001(\005\022\014\n\004shop\030\006 \001(\t\022\r\n\005price\030\007 \001(\001\022\016\n\006amou" +
-      "nt\030\010 \001(\001\022\r\n\005total\030\t \001(\001\022\014\n\004date\030\n \001(\003\"X\n" +
-      "\006Groups\022\016\n\006action\030\001 \002(\005\022\023\n\013action_time\030\002" +
-      " \002(\003\022\013\n\003key\030\003 \002(\003\022\r\n\005value\030\004 \001(\t\022\r\n\005colo" +
-      "r\030\005 \001(\tB#\n\021com.studyo.economB\016EconomProt" +
-      "ocol"
+      "\n\016protocol.proto\022\006econom\"*\n\010Shopping\022\036\n\006" +
+      "buying\030\001 \003(\0132\016.econom.Buying\"\250\001\n\006Buying\022" +
+      "\016\n\006action\030\001 \002(\005\022\023\n\013action_time\030\002 \002(\003\022\r\n\005" +
+      "ownid\030\003 \002(\003\022\014\n\004name\030\004 \001(\t\022\022\n\ngroup_name\030" +
+      "\005 \001(\005\022\014\n\004shop\030\006 \001(\t\022\r\n\005price\030\007 \001(\001\022\016\n\006am" +
+      "ount\030\010 \001(\001\022\r\n\005total\030\t \001(\001\022\014\n\004date\030\n \001(\003\"" +
+      ",\n\006Groups\022\"\n\010division\030\001 \003(\0132\020.econom.Div" +
+      "ision\"Z\n\010Division\022\016\n\006action\030\001 \002(\005\022\023\n\013act" +
+      "ion_time\030\002 \002(\003\022\013\n\003key\030\003 \002(\003\022\r\n\005value\030\004 \001" +
+      "(\t\022\r\n\005color\030\005 \001(\tB#\n\021com.studyo.economB\016",
+      "EconomProtocol"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2226,12 +3614,24 @@ public final class EconomProtocol {
     internal_static_econom_Shopping_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_econom_Shopping_descriptor,
+        new java.lang.String[] { "Buying", });
+    internal_static_econom_Buying_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_econom_Buying_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_econom_Buying_descriptor,
         new java.lang.String[] { "Action", "ActionTime", "Ownid", "Name", "GroupName", "Shop", "Price", "Amount", "Total", "Date", });
     internal_static_econom_Groups_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_econom_Groups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_econom_Groups_descriptor,
+        new java.lang.String[] { "Division", });
+    internal_static_econom_Division_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_econom_Division_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_econom_Division_descriptor,
         new java.lang.String[] { "Action", "ActionTime", "Key", "Value", "Color", });
   }
 

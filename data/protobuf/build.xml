@@ -17,22 +17,22 @@
     </target>
 
     <target name="2. compile-class">
-        <mkdir dir="classes"/>
         <mkdir dir="build"/>
         <exec dir="${PROTO_DIR}" executable="cmd">
             <arg line="/c ${PROTO_BIN} -I=${SRC_DIR} --java_out=${DST_DIR} ${SRC_FILE}"/>
         </exec>
     </target>
 
+
     <target name="3. create-jar">
+        <mkdir dir="classes"/>
         <mkdir dir="lib"/>
 
         <javac srcdir="${DST_DIR}"
                destdir="${BLD_DIR}"
                classpath="${SRC_DIR}/protobuf-java-2.6.1.jar"
                debug="on"
-               source="1.8"
-                />
+               source="1.8"/>
         <jar destfile = "${LIB_DIR}/${econom-jar}"
              basedir = "${BLD_DIR}" />
     </target>

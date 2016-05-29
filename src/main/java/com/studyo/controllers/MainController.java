@@ -19,7 +19,7 @@ public class MainController {
 //    public void insert(@RequestBody byte[] str)
     public void proto(@RequestBody EconomProtocol.Shopping sh)
             throws InvalidProtocolBufferException, UnsupportedEncodingException {
-        System.out.println(sh.getName());
+        System.out.println(sh.getBuyingList().get(0).getName());
     }
 
     @RequestMapping(value = "/object", method = RequestMethod.POST)
@@ -34,18 +34,3 @@ public class MainController {
         System.out.println(str);
     }
 }
-
-/*
-URL myURL = new URL(serviceURL);
-HttpURLConnection myURLConnection = (HttpURLConnection)myURL.openConnection();
-String userCredentials = "username:password";
-String basicAuth = "Basic " + new String(new Base64().encode(userCredentials.getBytes()));
-myURLConnection.setRequestProperty ("Authorization", basicAuth);
-myURLConnection.setRequestMethod("POST");
-myURLConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-myURLConnection.setRequestProperty("Content-Length", "" + postData.getBytes().length);
-myURLConnection.setRequestProperty("Content-Language", "en-US");
-myURLConnection.setUseCaches(false);
-myURLConnection.setDoInput(true);
-myURLConnection.setDoOutput(true);
- */

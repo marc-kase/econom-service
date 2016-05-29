@@ -20,7 +20,7 @@ public class CompareJsonProtobuf {
         double amount = 1;
         double total = price * amount;
 
-        EconomProtocol.Shopping sh = EconomProtocol.Shopping.newBuilder()
+        EconomProtocol.Buying sh = EconomProtocol.Buying.newBuilder()
                 .setAction(ACTION.INSERT.ordinal())
                 .setActionTime(actionTime)
                 .setOwnid(actionTime)

@@ -1,6 +1,8 @@
 package com.studyo.adapters;
 
 import com.studyo.config.DbConfiguration;
+import com.studyo.services.DbServiceBuilder;
+import com.studyo.services.DbServiceManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -9,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.protobuf.ProtobufHttpMessageConverter;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
 import org.springframework.web.servlet.LocaleResolver;
@@ -32,13 +33,14 @@ public class MvcConfigurationAdapter extends WebMvcAutoConfiguration.WebMvcAutoC
     private DbConfiguration dbConfiguration;
 
     @Bean(name = "dataSource")
-    public DriverManagerDataSource dataSource() {
-        DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+    public DbServiceManager dataSource() {
+/*        DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
         driverManagerDataSource.setDriverClassName(dbConfiguration.getDatabaseDriverClassName());
         driverManagerDataSource.setUrl(dbConfiguration.getDatasourceUrl());
         driverManagerDataSource.setUsername(dbConfiguration.getDatabaseUsername());
-        driverManagerDataSource.setPassword(dbConfiguration.getDatabasePassword());
-        return driverManagerDataSource;
+        driverManagerDataSource.setPassword(dbConfiguration.getDatabasePassword());*/
+
+        return new DbServiceBuilder().newBuilder(dbConfiguration).build();
     }
 
     @Bean(name="userDetailsService")

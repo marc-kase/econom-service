@@ -16,6 +16,9 @@ public class AuthenticationService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
+        if (username.isEmpty()) {
+            return null;
+        }
         UserInfo userInfo = userDAO.getUserInfo(username);
         UserDetails userDetails = new User(userInfo.getUsername(),
                 userInfo.getPassword(), userInfo.getAuthorities());
